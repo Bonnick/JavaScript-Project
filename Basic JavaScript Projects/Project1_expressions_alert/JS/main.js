@@ -5,9 +5,15 @@
         <meta charset="UTF-8">
      </head>
 <body>
-    <script>
-        window.alert("Hello, world!"); 
-        </script>
+    var x="10";
+    if (x===10) {
+      var x=10 
+      console.log(x); 
+    }
+
+    document.write("Hello World");
+   
+    
 
 </body>
 </html>
