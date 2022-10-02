@@ -5,7 +5,9 @@
         <meta charset="UTF-8">
      </head>
 <body>
-    <script src="js/main.js"></script>
+    <script>
+        alert ("Hello World!");
+    </script>
 
 </body>
 </html>
