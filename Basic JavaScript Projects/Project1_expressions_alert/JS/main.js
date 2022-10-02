@@ -6,8 +6,8 @@
      </head>
 <body>
     <script>
-        alert ("Hello World!");
-    </script>
+        window.alert("Hello, world!"); 
+        </script>
 
 </body>
 </html>
