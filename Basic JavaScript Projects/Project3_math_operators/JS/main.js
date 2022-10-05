@@ -29,5 +29,22 @@ function multiplication() {
     document.getElementById("Math5") .innerHTML = -X;
  }
 
+ function increase() {
+   var X= 5;
+   X++;
+   document.write(X);
+ }
+
+ 
+ function decrease() {
+   var X= 5.25;
+    X--;
+   document.write(X);
+ }
+
+ function random() {
+   window.alert(Math.random());
+ }
+
 
 
