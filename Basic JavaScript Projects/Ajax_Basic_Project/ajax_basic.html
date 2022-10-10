@@ -12,6 +12,40 @@
 				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
 			</div>
 		<script type="text/javascript">
+
+            // Step1 XMLHttpRequest();
+              var ajax = new XMLHttpRequest();
+
+
+
+            //Step2 Call on the AJAX Open();
+
+            ajax.open('GET', 'content.html');
+
+            
+            //Step3 Define the Ajax Callback
+            ajax.onreadystatechange = function() {
+                if (ajax.readyState =4){
+                    document.getElementById('content').innerHTML = ajax.responseText;
+
+                }
+                
+
+            }
+
+
+
+            //step 4 Call on the Ajax send();
+
+         function getContent() {
+            ajax.send();
+            document.getElementById('btn_content').style.display = 'none'; 
+         }
+
+
+
+           
+
 			
 		</script>
     </body>
