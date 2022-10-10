@@ -50,18 +50,18 @@ function Handle_Operator(Next_Operator) {
         Calculator.operator = Next_Operator;
         return;
     }
-    if (First_Operand == null) {
+    if (First_Operand === null) {
         Calculator.First_Operand = Value_of_Input;
         } else if (operator) {//check if an operator already exists
         const Value_Now = First_Operand || 0;
         //if operator exist, property lookup is performed for the operator
         //in the perform_Calculation object and the function that matches the
         //operator is executed
-        let result= perform_Calculation[operator] (Value_Now, Value_of_Input);
+        let result= Perform_Calculation[operator] (Value_Now, Value_of_Input);
         //here we add a fixed amount of numbers after the decimal
-        result= Number(result) .toFixed(9)
+        result= Number(result).toFixed(9)
         //this will remove any trailing 0's
-        result= (result* 1) .toString()
+        result= (result* 1).toString()
         Calculator.Display_Value= parseFloat(result);
         Calculator.First_Operand= parseFloat(result);
         
@@ -71,11 +71,11 @@ function Handle_Operator(Next_Operator) {
 }
 
 const perform_Calculation= {
-    '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
-    '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
-    '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
-    '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
-    '=': (First_Operand, Second_Operand) => First_Operand = Second_Operand,
+    '/':(First_Operand, Second_Operand) => First_Operand / Second_Operand,
+    '*':(First_Operand, Second_Operand) => First_Operand * Second_Operand,
+    '+':(First_Operand, Second_Operand) => First_Operand + Second_Operand,
+    '-':(First_Operand, Second_Operand) => First_Operand - Second_Operand,
+    '=':(First_Operand, Second_Operand) => Second_Operand,
 };
 
 function Calculator_Reset() {
@@ -94,7 +94,7 @@ function Update_Display() {
 Update_Display();
 //this section monitors button clicks
 const keys = document.querySelector('.calculator-keys');
-keys.addEventListener('Click', (event) => {
+keys.addEventListener('click', (event) => {
     // the target variable is an object that represents the element
     //that was clicked
     const { target} = event;
