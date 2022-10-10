@@ -26,7 +26,7 @@ if (activePlayer ==='X') {
         activePlayer = 'X';
     }
     //This function plays placement sound.
-    Audio('./media/place.mp3');
+    audio('./media/place.mp3');
     //This condition checks to see if it is comput
     if(activePlayer === 'O') {
         //This function disables clicking for comp
@@ -91,7 +91,7 @@ function checkWinConditions() {
     //and 9 squares are selected, the code executes.
     else if (selectedSquares.length>= 9) {
         //This function plays the tie game sound.
-        Audio('./media/tie.mp3');
+        audio('./media/tie.mp3');
         // This function sets a .3 second timer before the resetGame is called.
         setTimeout(function () { resetGame(); }, 1000);
     }
@@ -119,7 +119,7 @@ function disableClick() {
 //placement sound ('./media/place.mp3)
 function audio(audioURL) {
     //we create a new audio object and we pass the path as a parameter.
-    let audio= new Audio(audioURL);
+    let audio = new audio (audioURL);
     //play method plays our audio sound.
     audio.play()
 }
@@ -134,9 +134,9 @@ function disableClick() {
 
 //This function takes a string parameter of the path you set earlier for 
 //placement sound ('./media/place.mp3)
-function audio(audioURL) {
+function audio (audioURL) {
     //we create a new audio object and we pass the path as a parameter.
-    let audio = new Audio(audioURL);
+    let audio = new audio (audioURL);
     //play method plays our audio sound.
     audio.play();
 }
@@ -162,9 +162,9 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
 
     //This function interacts with the canvas
 
-    function animationLineDrawing() {
+    function animateDrawline() {
         //This variable creates the loop for when the game ends it restarts.
-        const animationLoop = requestAnimationFrame(animationLineDrawing);
+        const animationLoop = requestAnimationFrame(animateDrawline);
         //This method clears content form last loop iteration.
         c.clearRect(0,0,608,608);
         //This method starts a new path
@@ -210,7 +210,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line plays the win sounds.
     audio('./media/winGame.mp3');
     //This line calls our main main animation loop.
-    animateLineDrawing();
+    animateDrawline();
     //This line waits 1 second.
     //Then, clears canvas, resets game, and allows clicking again.
     setTimeout(function () { clear(); resetGame(); }, 1000);
