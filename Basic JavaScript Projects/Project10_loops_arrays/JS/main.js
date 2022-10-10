@@ -36,10 +36,10 @@ function constant_function() {
 
 
 
-var X= 82;
+let X= 82;
 document.write(X);
 {
-    var X= 33;
+    let X= 33;
     document.write("<br>" + X);
 }
 document.write("<br>" + X);
@@ -54,4 +54,4 @@ let car = {
     }
     
 };
-document.getElementById("Car_Object") .innerHTML = car.description();
+document.write("Car_Object") .innerHTML = car.description();
