@@ -119,7 +119,7 @@ function disableClick() {
 //placement sound ('./media/place.mp3)
 function audio(audioURL) {
     //we create a new audio object and we pass the path as a parameter.
-    let audio =newaudio(audioURL);
+    let audio =new Audio(audioURL);
     //play method plays our audio sound.
     audio.play()
 }
@@ -136,7 +136,7 @@ function disableClick() {
 //placement sound ('./media/place.mp3)
 function audio(audioURL) {
     //we create a new audio object and we pass the path as a parameter.
-    let audio =newaudio(audioURL);
+    let audio =new Audio(audioURL);
     //play method plays our audio sound.
     audio.play();
 }
