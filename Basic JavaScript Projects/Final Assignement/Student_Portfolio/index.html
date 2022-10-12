@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Tech Academy Portfolio</title>
+        <!-- The Your Name Here in the title is changed to Tech Academy Portfolio-->
+        <link rel="shortcut icon" type="img/jpg" href="../images/coding_icon.jpg">
+        <link rel="stylesheet" type="text/css" href="../CSS/sample_portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <!--New section is added-->
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+            <!--onclick and ondblclick functions added to open and close the contact form-->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="./images/video/Typing.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">    
+            <h1 class="white-text">TECH ACADEMY'S PORTFOLIO</h1> <!--your name portfolio is changed to Tech academy's portfolio-->
+            <strong>
+                <p class="center">     <!--information was changed to personalized the website-->
+                    <q>. Software and Web Developers are the creative minds behind computers and websites. Some software developers develop the applications that allow people to do specific tasks on computers or devices, while other develop the underlying systems that run the devices or control the networks. <!-- The was modified-->
+                        <br> Developers are increasingly responsible for the full lifecycle of application development, including operational responsibilities. 
+                        <br>They are to be treated with utmost respect and love.
+                    </q>
+                    <br> -Marlesa Bonnick
+                    <br>
+                    <br> My name is Romario Bonnick. Welcome to my portfolio website. On it, I will tell you about my background and experience. <!--My name is change to my name is Romario Bonnick-->
+                    <br>
+                    <br> Thank you for visiting my website! 
+                </p>
+            </strong>
+        </div>
+        
+       <!--Slideshow section added-->
+        
+       <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="../images/personal photo.jpg" alt="Picture of Myself">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="../images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos"> 
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="../images/Python.png" alt="Python logo">
+                        <div class="text"> I am trained in the popular programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="../images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                        <div class="text"> I am trained in C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="../images/SQL_and_Database.jpg" alt="SQL logo"> 
+                        <div class="text"> I am train in back end development, databases and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="../images/coding_icon.jpg" alt="coding"> 
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now to start coding!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="./images/monitor.jpg" alt="About_Image"> <!--Image was inserted to replace the actual photo-->
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am a software developer who loves to code! As a husband to one wife, I love to spend time with her and travel. <!--The original sentence was modified-->
+                    <br>
+                    <br>I am a graduate of <a href="https://www.academyoflearning.com/" target="_blank">Academy of Learning</a>’s Software and web developer program with experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <!--school og graduation and link was changed from The tech academy to the academy of learning-->
+                    <br>
+                    <br>I am a Software and Web developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below! <!--change was made from full stock to software and web developer-->
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/Bonnick" target="_blank">Romario Bonnick Github</a></p>  <!--changes made I provided my own github account-->
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/the-tech-academy" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+
+            <!-- Contact form -->
+        <div id="Contact">
+           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+           <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Type your message here" name="message">
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+           </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+
+     <p class="center">&Romario Bonnick.inc., <a href="https://www.academyoflearning.com" target="_blank">Academy of learning</a></p><br><!--modification was made here to put my personal information-->
+        </footer>
+        <script src="../JS/sample_portfolio.js"></script>
+    </body>
+</html>
